@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+    <script src="/JS/index.js"></script>
+    <link href="CSS/Style.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Sorteador</title>
+</head>
+<body>
+<div id="resultados" class="col-sm-12 mt-5" th:if="${resultado}">
+    <div class="col-sm-12 text-center">
+        <table class="col-sm-12 ">
+            <h4>Resultado do Sorteio</h4>
+            <tbody>
+            <tr th:each="numero :${resultado}">
+                <td th:text="${numero}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="container text-center">
+    <div class="text-center ">
+        <p><b>Informações do Sorteio</b></p>
+
+    </div>
+    <div class="row align-items-start">
+        <div class="col">
+            <p class="m-2"><b>Data do Sorteio</b></p>
+            <p class="m-2" th:text="${data}"></p>
+            <p class="m-2"><b>(GMT-3) Horário de Brasilia</b></p>
+
+
+        </div>
+        <div class="col">
+            <p class="m-2"><b>Quantidade Sorteada </b></p>
+            <p class="m-2" th:text="${quantidade}"></p>
+
+
+        </div>
+        <div class="col">
+            <div class="col mx-center">
+                <p class="m-2"><b>Sorteio entre </b></p>
+                <p class="m-2" th:text="${faixanumero}"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col mt-5 text-center">
+        <a class="cursor-pointer p-4 btn btn-primary  " href="/"><b>Voltar para o Sorteador</b></a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body {
+  background-image: url('https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2017/08/29/numeros-istock-178895760.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+<style>
+
+        .centered-title {
+            text-align: center;
+        }
+
+
+        .centered-image {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
